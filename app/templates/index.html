@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block link %}
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<h2>Home Page</h2>
+<img src="../static/images/powerful.svg" alt="">
+{% endblock content %}

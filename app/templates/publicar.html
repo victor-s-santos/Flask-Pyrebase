@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Faça aqui sua postagem</h2>
+
+<div>
+    <h2>Publique aqui</h2>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        {{ form.titulo.label }}:{{ form.titulo}}
+        {{ form.corpo.label }}:{{ form.corpo}}
+        {{ form.foto.label }}:{{ form.foto}}
+        {{ form.submit_btn }}
+    </form>
+</div>
+
+{% endblock content %}

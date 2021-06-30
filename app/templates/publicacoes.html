@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Todas as Publicações</h2>
+{% for post in posts %}
+    {% for key, value in post.items() %}
+        {% if key == "titulo" %}
+            <p>Título do Post:{{ value }}</p>
+        {% endif %}
+        {% if key == "corpo" %}
+        <p>Corpo do Post: {{ value }}</p>
+        {% endif %}
+        {% if key == "imagem" %}    
+          <p>Imagem do post: <img src="{{ value }}"></p>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+{% endblock content %}

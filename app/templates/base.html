@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+    <span>O melhor Blog da Galáxia!</span>
+    <table>
+        <th><a href='/cadastro'>Registrar</a></th>
+        <th><a href='/'>Login</a></th>
+        <th><a href='/recupera'>Recuperar Senha</a></th>
+        <th><a href='/publicacoes'>Publicações</a></th>
+    </table>
+</header>
+<body>
+{% with messages = get_flashed_messages(with_categories=false) %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    <h1>Bem vindo ao Blog Flask-Firebase!</h1>
+    {% block content %}{% endblock %}
+</body>
+</html>
